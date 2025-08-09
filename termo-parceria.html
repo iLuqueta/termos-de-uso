@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Termos de Parceria - SAMU™ - BVB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0e0e0e;
+            color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+        }
+
+        h1, h2 {
+            color: #ffffff;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .autor-img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .data {
+            font-size: 0.85em;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #0d47a1;
+        }
+
+        .botao-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .botao-container a {
+            background-color: #d92b2b; /* vermelho base */
+            color: #fff;
+            padding: 12px 28px;
+            margin: 6px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(217, 43, 43, 0.3);
+            transition: 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease,
+                transform 0.2s ease;
+        }
+
+        .botao-container a:hover {
+            background-color: #ff3b3b; /* vermelho mais claro no hover */
+            box-shadow: 0 6px 20px rgba(255, 59, 59, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .botao-container a.ativo {
+            background-color: #b62323; /* vermelho mais escuro para indicar ativo */
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(2px);
+            cursor: default; /* não clicável */
+        }
+
+        .botao-container a.ativo:hover {
+            background-color: #b62323; /* mantém a cor ativa no hover */
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(2px);
+        }
+
+        .perfil-falso {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background: #0e0e0e;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .perfil-falso img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .perfil-falso strong {
+            color: #9e9e9e;
+            font-size: 16px;
+        }
+        .perfil-falso small {
+            color: #666;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="botao-container">
+            <a href="index.html">Termos e Condições de Compra</a>
+            <a href="termo-parceria.html">Termos Parceria</a>
+            <a href="termo-denuncia.html">Termos Denúncias</a>
+        </div>
+
+        <!-- Perfil Falso -->
+        <div class="perfil-falso">
+            <img src="https://imgur.com/Plqqnms.png" alt="Avatar" />
+            <div>
+                <strong>iLuqueta (36)</strong><br />
+                <small>14 de abril de 2025 • 23:12</small>
+            </div>
+        </div>
+
+        <h2>Termos Parceria</h2>
+        <p><strong>1º •</strong> Ter mais de 100 membros no Discord.</p>
+        <p><strong>2º •</strong> Ter um chat com o <a href="https://discord.gg/cUhHx7jWnz" target="_blank">link da SAMU</a>.</p>
+        <p><strong>3º •</strong> Ficar no nosso Discord, como representante do seu Grupo.</p>
+        <p><strong>4º •</strong> Não cancelar a parceria sem nos avisar.</p>
+        <p><strong>5º •</strong> Não ter/fazer parceria com outro grupo paramédico.</p>
+        <p><strong>6º •</strong> Ser maior de 18 anos.</p>
+        <h2>Atenção Representante</h2>
+        <p><strong>• </strong> A <strong>SAMU™ - BVB</strong> não está obrigada a cumprir quaisquer termos de parceria propostos por grupos parceiros que solicitaram parceria por meio de nosso Discord.</p>
+        <p><strong>• </strong> Caso o representante do grupo deixe o nosso Discord ou descumpra quaisquer dos termos acima, a parceria será imediatamente desativada, e o representante será banido permanentemente do Discord da <strong>SAMU™ - BVB</strong>.</p>
+        <p class="data">Última atualização dos termos: 14 de abril de 2025 • 23:12</p>
+
+        <!-- Banner no final -->
+        <img src="BANNER_SAMU.png" alt="Autor" class="autor-img" />
+    </div>
+
+    <script>
+      // Marca automaticamente o botão ativo baseado no arquivo da URL atual
+      const links = document.querySelectorAll('.botao-container a');
+      const currentPage = window.location.pathname.split('/').pop();
+
+      links.forEach(link => {
+          if (link.getAttribute('href') === currentPage || 
+              (currentPage === '' && link.getAttribute('href') === 'index.html')) {
+              link.classList.add('ativo');
+          }
+      });
+    </script>
+</body>
+</html>
